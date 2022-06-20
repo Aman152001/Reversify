@@ -4,6 +4,7 @@
     --dark-color: #292929;
     --white-color: #ffffff;
     --h-color: #87bde3;
+    --checklist: rgb(255, 102, 0); 
 
 }
 
@@ -62,11 +63,19 @@ footer .social>a:hover{
     color: #264de4;
 }
 .checklist >li i{
-    color: var(--primary-color);
+    color: var(--checklist);
 }
 code[class*="language-"],
 pre[class*="language-"] {
 white-space: pre-wrap;
 word-break: break-all;
 word-wrap: break-word;
+}
+.newFont{
+    font-family: 'Permanent Marker', cursive;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 30px;
+    color: white;
+
 }

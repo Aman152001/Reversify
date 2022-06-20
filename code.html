@@ -2,7 +2,7 @@
 <html lang="en" class="h-100">
 
 <head>
-    <title>App Name: A Coding Project by Aman Yadav</title>
+    <title>Reversify: A Coding Project by Aman Yadav</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -16,13 +16,16 @@
     <script src="https://kit.fontawesome.com/5db21ba9c6.js" crossorigin="anonymous"></script>
     
     <link rel="icon" type="image/png" href="img/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
 </head>
 
 <body class="d-flex flex-column h-100">
 <!-- ==== Nav Section ==== -->
 <nav class="navbar navbar-expand-md navbar-light  fixed-top ">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">APP NAME</a>
+        <a class="navbar-brand newFont text-light" href="#">Reversify</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
             aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -52,20 +55,44 @@
 <!-- ==== Main Section ==== -->
 <main class="flex-shrink-0">
     <div class="container py-4 px-4 mt-5">
-        <h2 class="border-1 border-bottom border-dark">The Coder For: App Name</h2>
+        <h2 class="border-1 border-bottom border-dark">The Coder For: Reversify</h2>
         <div class="row row-cols-1 row-cols-lg-2">
             <div class="col-lg-8">
                 <pre class="line-numbers"><code class="language-javascript">
-                    //Call Hello World with alert!
-function HelloWorld(){
-    alert("Hello World!");
+                    <!-- Code -->
+//get the string from the user
+function getString(){
+    document.getElementById("alert").classList.add("invisible");
+    let userString = document.getElementById("userString").value;
+    let revString = reverseString(userString);
+    displayString(revString);
+
+}
+//Reverse the string
+function reverseString(userString){
+
+    let rev = [];
+    for(let i=userString.length-1;i>=0;i--){
+        rev +=  userString[i];
+    }
+    return rev;
+}
+
+//Display the reversed string to the user
+function displayString(revString){
+    document.getElementById("msg").innerHTML=`Your reversed string is: ${revString}`;
+    document.getElementById("alert").classList.remove("invisible");
 }
                 </code></pre>
             </div>
             <div class="col-lg-4">
-                <p> The Code is structure in one function.</p>
-                <h5>Hello World!</h5> 
-                <p> Hello world is function which displays an alert page page showing alert as hello world!</p>
+                <p class="lead fw-bold"> The Code is structure in three function.</p>
+                <h5 class="border-bottom border-primary">getString</h5> 
+                <p> The <b>getString</b> function will obtain the string from the user.</p>
+                <h5 class="border-bottom border-primary">revereString</h5> 
+                <p> The <b>reverseString</b> function will take the user String from the <b>getString</b> function and will store into arrays. It will then reverse the string using a for loop and will return it.</p>
+                <h5 class="border-bottom border-primary">displayString</h5> 
+                <p> The <b>displayString</b> function will take the reverse string from the <b>reverseString</b> function and then it will display it to the user.</p>
             </div>
         </div>
     </div>
